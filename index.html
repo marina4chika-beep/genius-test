@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Сучасна пекарня</title>
     <!--Styles-->
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <header class="header">
       <div class="container">
-        <div class="header-container">
-          <nav class="header-nav">
+        <div class="header__container">
+          <nav class="header__nav">
             <a href="./index.html">
               <img src="./images/logo.svg" alt="Логотип Сучасної пекарні" />
             </a>
-            <ul class="header-menu">
+            <ul class="header__menu">
               <li>
                 <a class="link" href="#tradations-section">Наші традиції</a>
               </li>
@@ -24,14 +24,16 @@
               <li><a class="link" href="#contact-section">Контакти</a></li>
             </ul>
           </nav>
-          <button class="button">Замовити дзвінок</button>
+          <button class="button modal-btn-open">Замовити дзвінок</button>
         </div>
       </div>
     </header>
     <main>
       <section class="hero-section">
         <div class="container">
-          <h1 class="hero-title"><span class="accent">Сучасна</span>пекарня</h1>
+          <h1 class="hero-section__title">
+            <span class="text-brand">Сучасна</span>пекарня
+          </h1>
         </div>
       </section>
       <section class="advantages-section">
@@ -52,13 +54,17 @@
                 Новий формат традицій
               </h2>
               <p class="traditions-text">
-                <span class="brand uppercase">shop bakery</span> — це пекарня,
-                яка взяла все найкраще, і зберегла смак традиційної випічки та
-                натуральність інгредієнтів.
+                <span class="text-brand text-bold text-uppercase"
+                  >shop bakery</span
+                >
+                — це пекарня, яка взяла все найкраще, і зберегла смак
+                традиційної випічки та натуральність інгредієнтів.
               </p>
               <p class="traditions-text limited">
                 Ми працюємо як найвідоміші мережі — <br />
-                <span class="brand">5 хвилин і замовлення готове</span>. А ще у
+                <span class="text-brand text-bold"
+                  >5 хвилин і замовлення готове</span
+                >. А ще у
                 <br />
                 наших пекарень стильний дизайн та <br />
                 висока якість обслуговування!
@@ -178,7 +184,7 @@
                 </article>
               </li>
             </ul>
-            <button class="carousel-button" type="button">
+            <button class="carousel-button next" type="button">
               <svg width="16" height="16">
                 <use href="./images/icons.svg#icon-arrow"></use>
               </svg>
@@ -194,6 +200,54 @@
                 Приєднуйся до мережі пекарень
               </h2>
               <p>Заповни форму, щоб ми звʼязались з тобою!</p>
+              <form name="contact-form" autocomplete="off">
+                <div class="form-field">
+                  <label class="form-label visually-hidden" for="user-name"
+                    >Імʼя</label
+                  >
+                  <input
+                    class="form-input"
+                    type="text"
+                    name="user-name"
+                    id="user-name"
+                    placeholder="Імʼя"
+                  />
+                </div>
+                <div class="form-field">
+                  <label class="form-label visually-hidden" for="user-tel"
+                    >Телефон</label
+                  >
+                  <input
+                    class="form-input"
+                    type="tel"
+                    name="user-tel"
+                    id="user-tel"
+                    placeholder="Телефон"
+                  />
+                </div>
+                <div class="form-field">
+                  <label class="form-label visually-hidden" for="user-email"
+                    >Електронна пошта</label
+                  >
+                  <input
+                    class="form-input"
+                    type="email"
+                    name="user-email"
+                    id="user-email"
+                    placeholder="Електронна пошта"
+                  />
+                </div>
+                <button class="form-button button" type="submit">
+                  Замовити дзвінок
+                </button>
+              </form>
+              <button class="modal-btn-close" type="button">Close</button>
+              <p class="form-terms">
+                Натискаючи на кнопку я погоджуюся з
+                <a class="form-terms-link" href="#"
+                  >політикою конфіденційності</a
+                >
+              </p>
             </div>
             <iframe
               class="contact-map"
@@ -271,5 +325,59 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden">
+      <div class="modal">
+        <h2>Замовити дзвінок</h2>
+        <p>Залишіть заявку та наш спеціаліст звʼяжеться з Вами!</p>
+        <form name="modal-form" autocomplete="on">
+          <div class="form-field">
+            <label class="form-label visually-hidden" for="user-name"
+              >Імʼя</label
+            >
+            <input
+              class="form-input"
+              type="text"
+              name="user-name"
+              id="user-name"
+              placeholder="Імʼя"
+            />
+          </div>
+          <div class="form-field">
+            <label class="form-label visually-hidden" for="user-tel"
+              >Телефон</label
+            >
+            <input
+              class="form-input"
+              type="tel"
+              name="user-tel"
+              id="user-tel"
+              placeholder="Телефон"
+            />
+          </div>
+          <div class="form-field">
+            <label class="form-label visually-hidden" for="user-email"
+              >Електронна пошта</label
+            >
+            <input
+              class="form-input"
+              type="email"
+              name="user-email"
+              id="user-email"
+              placeholder="Електронна пошта"
+            />
+          </div>
+          <button class="form-button button" type="submit">
+            Замовити дзвінок
+          </button>
+        </form>
+        <button class="modal-btn-close" type="button">Close</button>
+        <p class="form-terms">
+          Натискаючи на кнопку я погоджуюся з
+          <a class="form-terms-link" href="#">політикою конфіденційності</a>
+        </p>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>

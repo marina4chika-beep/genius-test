@@ -1,0 +1,21 @@
+.chef-card {
+  display: flex;
+  gap: 16px;
+}
+
+.chef-card-photo {
+  width: 240px;
+  border-radius: 8px;
+}
+
+.chef-card-title {
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.chef-card-text {
+  max-width: 312px;
+  font-size: 14px;
+  line-height: 1.4;
+}
